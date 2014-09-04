@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="ShuffleModule">
+<head>
+  <title>Search For Items</title>
+  <link rel="stylesheet" type="text/css" href="css/base-styles.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.js"></script>
+  
+</head>
+<body >
+
+<div class = "main-contain">
+    <div ng-controller="ShuffleController">
+        <div class="header-text">
+          <p ng-repeat="value in array">
+            {{value.name}} {{value.type}}
+          </p>
+        </div>
+        <div ng-repeat="value in array">
+          <img ng-src="{{value.image}}"/>
+        </div>
+        <button ng-click="itemList()">ANOTHER</button> 
+        <div class="lower-list">
+          <h3>Last Three</h3>
+          <ul>
+              <li ng-repeat="item in previous  | limitTo: -3 track by $index "ng-class="{even: $even, odd: $odd}">
+                Item: {{item.name}} That is: {{item.type}}
+              </li> 
+            </ul>
+          </div>
+    </div>
+</div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>
