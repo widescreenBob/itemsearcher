@@ -30,7 +30,8 @@ $scope.shuffle = function(o) {
       {name: "Shotgun", type: "Ranged Weapon", bonus:"+2 to Hit, Weapon Strength: 5, Range: 2", image: "http://img4.wikia.nocookie.net/__cb20110211034012/fallout/images/1/1d/COMBATSHOTGUN.png"}
         ];
     $scope.previous = [];
-    $scope.itemList = function() { $scope.array = $scope.shuffle(items).slice(0, 1);
+    $scope.itemList = function() { 
+                                $scope.array = $scope.shuffle(items).slice(0, 1);
                                  $scope.previous.push($scope.array[0]);
                                  };
 

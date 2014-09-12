@@ -24,7 +24,7 @@
           <h3>Last Three</h3>
           <ul>
               <li ng-repeat="item in previous  | limitTo: -3 track by $index "ng-class="{even: $even, odd: $odd}">
-                Item: {{item.name}} That is: {{item.type}}
+                {{item.name}}
               </li> 
             </ul>
           </div>
