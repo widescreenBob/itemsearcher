@@ -12,11 +12,12 @@
     <div ng-controller="ShuffleController">
         <div class="header-text">
           <p ng-repeat="value in array">
-            {{value.name}} {{value.type}}
+            {{value.name}} <span class ="type-of">{{value.type}}</span>
           </p>
         </div>
         <div ng-repeat="value in array">
           <img ng-src="{{value.image}}"/>
+          <p class ="bonus">{{value.bonus}}</p>
         </div>
         <button ng-click="itemList()">ANOTHER</button> 
         <div class="lower-list">
